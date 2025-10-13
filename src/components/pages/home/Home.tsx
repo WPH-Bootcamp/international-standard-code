@@ -2,7 +2,9 @@ import Button from '@/components/ui/Button/Button';
 import useHome from './useHome';
 
 const Home = () => {
-  const { loading, toggleTheme, changeLanguage, t, i18n } = useHome();
+  const { loading, toggleTheme, changeLanguage, t, i18n, pokemons } = useHome();
+
+  console.log(pokemons);
 
   return (
     <div>

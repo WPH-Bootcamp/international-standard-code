@@ -21,6 +21,7 @@ export default defineConfig({
     },
   },
   test: {
+    environment: 'jsdom',
     projects: [
       {
         extends: true,
