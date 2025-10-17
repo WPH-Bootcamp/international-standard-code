@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`input component render input component 1`] = `
+<div>
+  <input
+    type="text"
+  />
+</div>
+`;

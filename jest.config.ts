@@ -12,11 +12,20 @@ const config: Config = {
   collectCoverage: true,
   collectCoverageFrom: ['src/components/**/*.{js,ts,jsx,tsx}'],
   coverageDirectory: '<rootDir>/coverage',
-  globals: {
-    'ts-jest': {
-      tsconfig: '<rootDir>/tsconfig.node.json',
-    },
+
+  transform: {
+    '^.+\\.(ts|tsx)$': [
+      'ts-jest',
+      {
+        tsconfig: '<rootDir>/tsconfig.node.json',
+        useESM: true,
+      },
+    ],
   },
+
+  extensionsToTreatAsEsm: ['.ts', '.tsx'],
+
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
 };
 
 export default config;
